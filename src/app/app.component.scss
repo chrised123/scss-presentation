@@ -1,0 +1,31 @@
+@import './../assets/styles/variables.scss';
+@import './../assets/styles/mixins.scss';
+
+// text card styles
+.textcard{
+  @include box-shadow;
+  display: inline-block;
+  margin: 20px;
+  padding: 10px 30px 10px 10px;
+
+  .textcard-heading{
+    margin: 0;
+    color: $color-dark
+  }
+
+  .textcard-description{
+    margin: 0;
+    color: $color-disabled;
+  }
+}
+
+// input styles
+.input-danger{
+  min-width: 280px;
+}
+
+::placeholder{
+  color: red;
+}
+
+//card styles

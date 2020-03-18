@@ -1,0 +1,42 @@
+@import './fonts';
+
+:root, body {
+  // font-size: 62.5%; //which comes to 10 pixels (because root is 16px). so now 10px -> 1 rem
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  @include font-size(30);
+  font-weight: 400;
+}
+
+h2 {
+  @include font-size(28);
+  font-weight: 400;
+}
+
+h3 {
+  @include font-size(24);
+  font-weight: 400;
+}
+
+h4 {
+  @include font-size(20);
+  font-weight: 400;
+}
+
+h5 {
+  @include font-size(18);
+  font-weight: 400;
+}
+
+h6 {
+  @include font-size(16);
+  font-weight: 400;
+}
+
+p {
+  @include font-size(14);
+  font-weight: 400;
+}
+

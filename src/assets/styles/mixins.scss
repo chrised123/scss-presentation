@@ -1,0 +1,32 @@
+@mixin font-size($size, $base: 16) {
+  font-size: #{$size}px;
+  font-size: #{$size/$base}rem;
+}
+
+@mixin box-shadow {
+  box-shadow: 4px 4px 10px $color-shadow;
+}
+
+@mixin button-bg($bg) {
+  background-color : $bg;
+  border-color: darken($bg, 10%);
+  &:hover, &:focus {
+    background-color: darken($bg, 10%);
+    transition: all 0.3s ease;
+    box-shadow: none;
+  }
+  &:active, &.active {
+    background-color: darken($bg, 10%);
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active{
+    background-color: darken($bg, 10%);
+    border-color: darken($bg, 10%);
+  }
+
+  &:disabled, &.disabled{
+    background-color : $bg;
+  }
+
+}

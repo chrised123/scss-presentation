@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "ng-style": {
@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -60,6 +61,14 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "hmr": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.hmr.ts"
+                }
+              ]
             }
           }
         },
@@ -71,6 +80,10 @@
           "configurations": {
             "production": {
               "browserTarget": "ng-style:build:production"
+            },
+            "hmr": {
+              "hmr": true,
+              "browserTarget": "ng-style:build:hmr"
             }
           }
         },
@@ -92,6 +105,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -123,6 +137,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ng-style"
+    }
+  },
+  "defaultProject": "ng-style",
+  "cli": {
+    "analytics": "f9573c2e-5401-435f-b2e8-286383c3268d"
+  }
 }

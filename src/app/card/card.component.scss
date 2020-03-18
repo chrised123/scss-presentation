@@ -1,0 +1,20 @@
+@import './../../assets/styles/variables.scss';
+@import './../../assets/styles/mixins.scss';
+
+.card{
+  margin-right: 20px;
+  display: inline-block;
+}
+
+// .btn {
+//   background-color: $color-primary;
+//   border-color: darken($color-primary, 5%);
+
+//   &:hover, &:focus{
+//     background-color: darken($color-primary, 5%);
+//   }
+// }
+
+.btn {
+  @include button-bg($color-secondary);
+}
